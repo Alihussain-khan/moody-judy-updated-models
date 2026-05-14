@@ -6,10 +6,6 @@ Its is multimodel platform and requires paid api-key by claude. You dont need to
 
 ##### models
 - whisper for transcripts
-- wav2wec large
-- wav2vec with msp head
-- wavlm (its not really usefull but its there)
-- at last claude makes the final decision
-
-#### to run - frontend and backend have their own read me files. :)
-"I wrote the backend readme first, too lazy to move here"
+- emotion2vec+ for Speech emotion recognition
+- Beats and Clap for environment acoustics
+- claude for reasoning
