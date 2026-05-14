@@ -1,0 +1,17 @@
+fastapi[standard]
+
+# ASR
+faster-whisper
+
+# SER / ML
+torch
+transformers
+numpy
+scipy
+soundfile
+
+# LLM
+anthropic
+
+# Config
+python-dotenv

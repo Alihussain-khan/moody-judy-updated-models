@@ -1,0 +1,14 @@
+# env / secrets
+.env
+
+# python junk
+__pycache__/
+*.pyc
+
+# venv
+.venv/
+venv/
+
+# editors
+.vscode/
+.idea/

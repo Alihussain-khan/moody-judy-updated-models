@@ -1,0 +1,75 @@
+
+Environment: 
+    venv generated 
+    (.venv) PS E:\msds\thesis\moody-judy-prototype\backend> python --version 
+    Python 3.13.7
+    ffmpeg version 8.0.1-full_build-www.gyan.dev
+    pip install "fastapi[standard]" installed
+    ffmpeg installed
+
+rules:
+    guide me thoroughly about what to save in env, which file goes in which directory. best dev practices. please make sure the imports / packages you use are compatible with python version and each other. ask me detailes about the directories, env, or anything else if you feel confused, or if you are guessing.
+
+directory tree:
+(.venv) PS E:\msds\thesis\moody-judy-prototype\backend> tree /f /a app        
+Folder PATH listing for volume New Volume
+Volume serial number is CCB2-F3DB
+E:\MSDS\THESIS\MOODY-JUDY-PROTOTYPE\BACKEND\APP
+|   main.py
+|   __init__.py
+|   
++---api
+|   |   __init__.py
+|   |   
+|   \---V1
+|       |   router.py
+|       |   __init__.py
+|       |   
+|       \---endpoints
+|               events.py
+|               jobs.py
+|               __init__.py
+|
++---core
+|       config.py
+|       logging.py
+|       __init__.py
+|
++---models
++---prompts
++---schemas
++---services
+|   |   audio_convert.py
+|   |   events.py
+|   |   jobs.py
+|   |   storage.py
+|   |   __init__.py
+|   |
+|   \---__pycache__
+|           audio_convert.cpython-313.pyc
+|           __init__.cpython-313.pyc
+|
++---utils
+\---__pycache__
+        __init__.cpython-313.pyc
+
+(.venv) PS E:\msds\thesis\moody-judy-prototype\backend> tree /f /a data  
+Folder PATH listing for volume New Volume
+Volume serial number is CCB2-F3DB
+E:\MSDS\THESIS\MOODY-JUDY-PROTOTYPE\BACKEND\DATA
++---jobs
+|   \---229c4279e7314d198bb47e97fa00c9fb
+|           job.json
+|
+\---uploads
+        229c4279e7314d198bb47e97fa00c9fb.wav
+        test.wav
+
+(.venv) PS E:\msds\thesis\moody-judy-prototype\backend> 
+
+past converstations for context:
+    i ran it with (.venv) PS E:\msds\thesis\moody-judy-prototype\backend> fastapi dev main.py and its working. next step tell me about the directory structure for the backend. where things go, where will the models go.. current plan is to have three phases..1 transcript from audio model, 2 wave2vec+wavlm+msp-wave2vec, phase 3 we give all of that to claude for final result. I would like a great working directories and a good understandable flow with digestable code.. what are the best proctices
+    lets start to build an end point that receives the audio, maybe we could also detect the file type and change it to .wav because almost all models use that. after thats done and working. I would also like to stream messages like "changing the audio type" "getting transcripts" "SER model 1" "SER model 2" SER model 3" or only "SER phase" we might just run all three simultaneously"? then the Claude phase I want to show those messages on the frontend for users to see whats going on.
+    I dont want the whole solution in one file chat. I want phases, I want small steps of code that i understand and build as i go. also the claude api key will be sent by user with the apicall how you make it secure is on you.
+
+
